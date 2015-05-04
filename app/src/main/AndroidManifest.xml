@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fakhouri.salim.limkokram" >
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Sal" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Signup"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".HomePage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Profile"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.fakhouri.salim.limkokram.HomePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fakhouri.salim.limkokram.HomePage"
+                />
+            </activity>
+
+        <activity
+            android:name=".FriendPage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.fakhouri.salim.limkokram.HomePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fakhouri.salim.limkokram.HomePage"
+                />
+        </activity>
+
+        <activity
+            android:name=".CommentPage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.fakhouri.salim.limkokram.HomePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fakhouri.salim.limkokram.HomePage"
+                />
+        </activity>
+    </application>
+
+</manifest>
