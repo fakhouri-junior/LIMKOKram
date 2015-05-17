@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/white">
+
+    <com.parse.ParseImageView
+        android:id="@+id/ownerImage"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/ownerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="just to see"
+        android:textSize="22sp"
+        android:textColor="@color/viola"
+        android:gravity="center"
+        android:layout_alignTop="@+id/ownerImage"
+        android:layout_toRightOf="@+id/ownerImage"
+        android:layout_toEndOf="@+id/ownerImage"
+        android:layout_alignBottom="@+id/ownerImage"
+        android:clickable="true"
+        android:onClick="showFriendPage"/>
+
+    <TextView
+        android:id="@+id/ownerDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123 ww hasdhh asdhb"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/ownerImage"
+        android:layout_alignLeft="@+id/ownerImage"
+        android:layout_marginBottom="4dp"
+        />
+
+    <com.parse.ParseImageView
+        android:id="@+id/selfie"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/ownerDescription"
+        android:scaleType="fitXY"
+        android:layout_alignLeft="@+id/ownerImage"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"/>
+
+    <ImageButton
+        android:id="@+id/emptyHeart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/selfie"
+        android:clickable="true"
+
+        android:layout_alignLeft="@+id/ownerDescription"
+        android:src="@drawable/empty"/>
+
+    <ImageButton
+        android:id="@+id/redHeart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/selfie"
+        android:clickable="false"
+        android:layout_alignLeft="@+id/ownerDescription"
+        android:src="@drawable/red"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/numberOfHearts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selfie"
+        android:layout_toRightOf="@+id/emptyHeart"
+        android:text="10 Hearts"
+        android:textSize="20sp"
+        android:textColor="@color/red"
+        android:layout_alignBottom="@+id/emptyHeart"
+
+        android:gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+
+        />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comment"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/selfie"
+        android:layout_alignBottom="@+id/emptyHeart"
+        android:gravity="bottom"
+        android:clickable="true"
+
+        android:layout_marginRight="5dp"
+        />
+
+</RelativeLayout>

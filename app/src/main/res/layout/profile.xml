@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.parse.ParseImageView
+        android:id="@+id/userImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/user"
+        android:layout_below="@+id/userImage"
+        android:textColor="@color/black"
+        android:textSize="22sp"/>
+    <TextView
+        android:id="@+id/userNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="just to see"
+        android:layout_below="@+id/userImage"
+        android:layout_toRightOf="@+id/userName"
+        android:textColor="@color/viola"
+        android:textSize="22sp"/>
+
+
+    <TextView
+        android:id="@+id/numberOfSelfies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_margin="10dp"
+        android:text="@string/youTook"/>
+
+    <TextView
+        android:id="@+id/indicater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
