@@ -24,4 +24,10 @@ public class MyListFragment extends ListFragment {
         setListAdapter(customAdapter);
         customAdapter.loadObjects();
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+       //customAdapter.loadObjects();
+    }
 }

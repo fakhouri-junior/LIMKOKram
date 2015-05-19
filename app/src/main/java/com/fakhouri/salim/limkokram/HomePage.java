@@ -76,7 +76,7 @@ public class HomePage extends ActionBarActivity {
 
 
         // connect to parse
-        Parse.initialize(this, "ZHGcPgshJgm9XBHK8ZO49XCfClXgurbUmJDytLv2", "s6kC6xbeKXMYDUsSJ9LTgAsennl1RcnljXymGQpO");
+        Parse.initialize(this, "", "");
 
         // check the user
         currentUser = ParseUser.getCurrentUser();
@@ -150,11 +150,11 @@ public class HomePage extends ActionBarActivity {
             currentUser.saveInBackground();
 
             // make it read public
-            ParseACL parseACL = new ParseACL();
+            //ParseACL parseACL = new ParseACL();
 
-            parseACL.setPublicReadAccess(true);
-            parseACL.setWriteAccess(currentUser, true);
-            post.setACL(parseACL);
+            //parseACL.setPublicReadAccess(true);
+            //parseACL.setWriteAccess();
+            //post.setACL(parseACL);
 
             post.saveInBackground(new SaveCallback() {
                 @Override
