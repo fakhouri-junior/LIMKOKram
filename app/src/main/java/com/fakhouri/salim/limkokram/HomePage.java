@@ -21,7 +21,10 @@ import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.GetDataCallback;
+<<<<<<< HEAD
 import com.parse.Parse;
+=======
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -74,9 +77,21 @@ public class HomePage extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page_layout);
 
+<<<<<<< HEAD
 
         // connect to parse
         Parse.initialize(this, "", "");
+=======
+        // reference
+        peopleWhoLike = new JSONArray();
+
+        relative = (RelativeLayout)findViewById(R.id.RelativeContainerHomePage);
+        description = (EditText)findViewById(R.id.postText);
+        selfiePic = (ParseImageView)findViewById(R.id.selfiePic);
+        postSelfie = (Button)findViewById(R.id.postButton);
+        // add done button to keyboard it's quite annoying without
+        postSelfie.setImeOptions(EditorInfo.IME_ACTION_DONE);
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 
         // check the user
         currentUser = ParseUser.getCurrentUser();
@@ -92,6 +107,10 @@ public class HomePage extends ActionBarActivity {
                     if(e == null){
                         // we are good
                         bitmap = BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
                     }
                 }
             });
@@ -100,6 +119,7 @@ public class HomePage extends ActionBarActivity {
             // the user is not logged in take him to log in page
             Intent i = new Intent(HomePage.this,MainActivity.class);
             startActivity(i);
+<<<<<<< HEAD
             finish();
         }
 
@@ -115,6 +135,10 @@ public class HomePage extends ActionBarActivity {
 
 
 
+=======
+        }
+
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 
     }
 
@@ -150,11 +174,19 @@ public class HomePage extends ActionBarActivity {
             currentUser.saveInBackground();
 
             // make it read public
+<<<<<<< HEAD
             //ParseACL parseACL = new ParseACL();
 
             //parseACL.setPublicReadAccess(true);
             //parseACL.setWriteAccess();
             //post.setACL(parseACL);
+=======
+            ParseACL parseACL = new ParseACL();
+
+            parseACL.setPublicReadAccess(true);
+            parseACL.setWriteAccess(currentUser, true);
+            post.setACL(parseACL);
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 
             post.saveInBackground(new SaveCallback() {
                 @Override
@@ -193,8 +225,11 @@ public class HomePage extends ActionBarActivity {
         if(selfiePicHasImage){
             relative.setVisibility(View.VISIBLE);
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
     }
 
     public void showFriendPage(View view){

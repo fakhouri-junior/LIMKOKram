@@ -12,7 +12,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
+<<<<<<< HEAD
 import android.widget.Toast;
+=======
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
@@ -98,6 +101,7 @@ public class CustomAdapter extends ParseQueryAdapter<ParseObject> {
         final TextView numberOfHearts = (TextView) v.findViewById(R.id.numberOfHearts);
 
         final JSONArray peopleWhoLike = object.getJSONArray("peopleWhoLike");
+<<<<<<< HEAD
 
 
 
@@ -129,6 +133,14 @@ public class CustomAdapter extends ParseQueryAdapter<ParseObject> {
             emptyHeart.setVisibility(View.VISIBLE);
             redHeart.setVisibility(View.INVISIBLE);
         }
+=======
+        boolean bol = false;
+        // loop through the names and check if the current has clicked on the post if not show him the button else hide
+        ParseUser current = ParseUser.getCurrentUser();
+        String currentName = current.getUsername();
+        emptyHeart.setVisibility(View.VISIBLE);
+        redHeart.setVisibility(View.INVISIBLE);
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 
         emptyHeart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,13 +153,20 @@ public class CustomAdapter extends ParseQueryAdapter<ParseObject> {
                 // save the username who clicks it
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 peopleWhoLike.put(currentUser.getUsername());
+<<<<<<< HEAD
                 //Toast.makeText(getContext(),currentUser.getUsername(),Toast.LENGTH_SHORT).show();
+=======
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
                 // update the object
                 object.put("peopleWhoLike", peopleWhoLike);
                 // update the value
                 object.put("numberOfLikes", numberLikes);
                 // save
+<<<<<<< HEAD
                 object.saveEventually();
+=======
+                object.saveInBackground();
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 
                 // hide the emptyHeart
                 emptyHeart.setVisibility(View.INVISIBLE);
@@ -176,7 +195,11 @@ public class CustomAdapter extends ParseQueryAdapter<ParseObject> {
         numberOfHearts.setText(oui);
 
 
+<<<<<<< HEAD
         /*/ check if user clicked before on the post
+=======
+        // check if user clicked before on the post
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
         if (numberLikes != 0) {
             for (int i = 0; i < peopleWhoLike.length(); i++) {
                 String asd = null;
@@ -199,7 +222,11 @@ public class CustomAdapter extends ParseQueryAdapter<ParseObject> {
         }else{
             emptyHeart.setVisibility(View.VISIBLE);
             redHeart.setVisibility(View.INVISIBLE);
+<<<<<<< HEAD
         }*/
+=======
+        }
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 
 
         numberOfHearts.setOnClickListener(new View.OnClickListener() {
@@ -238,7 +265,14 @@ public class CustomAdapter extends ParseQueryAdapter<ParseObject> {
             }
 
         });
+<<<<<<< HEAD
         object.saveEventually();
+=======
+
+
+
+
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 
         return v;
     }

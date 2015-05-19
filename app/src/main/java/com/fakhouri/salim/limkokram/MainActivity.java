@@ -31,7 +31,12 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+<<<<<<< HEAD
 
+=======
+        // connect to parse
+        
+>>>>>>> 294daba1b580df7c74a670e3deb3a06f5aedcfc7
 
 
         // reference
